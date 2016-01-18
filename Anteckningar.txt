@@ -1,0 +1,63 @@
+User
+*Integer userId
+*String name
+long id
+boolean isActive
+
+
+Team
+*String name
+* Integer teamId
+List <User> users
+long id
+
+
+WorkItem
+long id
+* Integer itemId
+String description 
+Status status (Db String status)
+		-TO-DO
+		-assigned
+		-done
+		-accepted
+User solver
+
+
+Issue
+long id
+*Integer issueId
+String description
+boolean isSolved
+
+
+
+Lager
+
+WEB-API
+JSON adapter
+WorkItemResource
+IssueResource
+TeamResource
+UserResource
+
+API
+WorkItemInterface
+IssueInterface
+UserInterface
+TeamInterface
+
+-workItemLogic
+	-Statusändringar
+	-Issues
+	-
+
+
+Datalager
+-entities
+-repos
+-service implementation
+
+
+
+db-mysql
