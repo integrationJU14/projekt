@@ -22,7 +22,19 @@ public final class UserController {
 	public User create(User user) {
 		se.arole.datalayer.entity.User userDb = UserAdapter.toUserDb(user);
 		se.arole.datalayer.entity.User createdUser = userService.createUser(userDb);
-		
+
 		return UserAdapter.fromUserDb(createdUser);
+	}
+
+	public User getUser(Integer id) {
+		se.arole.datalayer.entity.User user = userService.getUser(id);
+
+		return UserAdapter.fromUserDb(user);
+	}
+
+	public User getUser(String userName) {
+		se.arole.datalayer.entity.User userByUsername = userService.getUserByUsername(userName);
+		
+		return UserAdapter.fromUserDb(userByUsername);
 	}
 }
