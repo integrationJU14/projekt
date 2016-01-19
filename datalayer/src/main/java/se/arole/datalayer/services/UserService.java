@@ -1,6 +1,6 @@
-package se.arole.api.service;
+package se.arole.datalayer.services;
 
-import se.arole.api.resource.User;
+import se.arole.datalayer.entity.User;
 
 public interface UserService {
 	
