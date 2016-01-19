@@ -61,3 +61,14 @@ Datalager
 
 
 db-mysql
+
+
+aroledatalayer
+api
+webapi
+
+
+mvn archetype:generate -DgroupId=se.arole.datalayer -DartifactId=datalayer -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=se.arole.web-api -DartifactId=web-api -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=se.arole.api -DartifactId=api -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
