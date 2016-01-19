@@ -1,4 +1,4 @@
-package se.arole.web-api;
+package se.arole.webapi;
 
 /**
  * Hello world!

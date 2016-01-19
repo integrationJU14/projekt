@@ -1,4 +1,4 @@
-package se.arole.web-api;
+package se.arole.webapi;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
