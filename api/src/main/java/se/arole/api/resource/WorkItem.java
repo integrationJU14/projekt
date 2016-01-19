@@ -2,6 +2,8 @@ package se.arole.api.resource;
 
 import java.util.List;
 
+import se.arole.datalayer.entity.Issue;
+
 public class WorkItem {
 	
 	int workItemId;
@@ -10,7 +12,7 @@ public class WorkItem {
 	List<Issue> assignedIssues;
 	User assignedUser;
 	
-	public WorkItem(long workItemId, String decsription, String header, User assignedUser, List<User> users, List<Issue> issues){
+	public WorkItem(Integer workItemId, String decsription, String header, User assignedUser, List<User> users, List<Issue> issues){
 		this.workItemId = workItemId;
 		this.description = decsription;
 		this.header = header;
@@ -24,7 +26,7 @@ public class WorkItem {
 		return workItemId;
 	}
 
-	public void setWorkItemId(long workItemId) {
+	public void setWorkItemId(Integer workItemId) {
 		this.workItemId = workItemId;
 	}
 
