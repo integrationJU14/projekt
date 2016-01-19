@@ -2,9 +2,12 @@ package se.arole.datalayer.Services;
 
 import se.arole.api.resource.User;
 import se.arole.api.service.UserService;
+import se.arole.datalayer.repository.UserRepository;
 
 public class UserServiceImp implements UserService {
-
+	
+	private UserRepository userRepository;
+	
 	@Override
 	public void changeStatusUser(boolean arg0, long arg1) {
 		// TODO Auto-generated method stub
@@ -12,8 +15,7 @@ public class UserServiceImp implements UserService {
 	}
 
 	@Override
-	public User createUser(User arg0) {
-		// TODO Auto-generated method stub
+	public User createUser(User user) {
 		return null;
 	}
 
