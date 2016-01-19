@@ -2,6 +2,11 @@ package se.arole.datalayer.services;
 
 import java.util.List;
 
+import se.arole.datalayer.entity.Status;
+import se.arole.datalayer.entity.Team;
+import se.arole.datalayer.entity.User;
+import se.arole.datalayer.entity.WorkItem;
+
 public interface WorkItemService {
 	
 	WorkItem createWorkItem(WorkItem workItem);
