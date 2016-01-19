@@ -15,9 +15,25 @@ public class User {
 	private Long id;
 	@Column
 	private String name;
+	@Column
+	private Integer userId;
+	@Column
+	private boolean isActive;
 	
-	public User(String name){
+	
+	public User(String name, Integer userId, boolean isActive) {
+		super();
 		this.name = name;
+		this.userId = userId;
+		this.isActive = isActive;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 }

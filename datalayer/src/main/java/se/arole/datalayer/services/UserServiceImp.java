@@ -1,4 +1,4 @@
-package se.arole.datalayer.Services;
+package se.arole.datalayer.services;
 
 import se.arole.api.resource.User;
 import se.arole.api.service.UserService;
