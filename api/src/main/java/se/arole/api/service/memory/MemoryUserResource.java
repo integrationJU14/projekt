@@ -35,8 +35,8 @@ public class MemoryUserResource {
 		return users.get(userId);
 	}
 	
-	public User getUserByUsername(){
-		
-	}
+//	public User getUserByUsername(){
+//		
+//	}
 
 }
