@@ -5,7 +5,7 @@ import java.util.Collections;
 
 import se.arole.api.adapter.UserAdapter;
 import se.arole.api.resource.User;
-import se.arole.datalayer.services.UserService;
+import se.arole.datalayer.service.UserService;
 
 public final class UserController {
 

@@ -1,4 +1,4 @@
-package se.arole.datalayer.services;
+package se.arole.datalayer.service;
 
 import java.util.List;
 

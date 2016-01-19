@@ -14,6 +14,5 @@ public class Team {
 	private String name;
 	@Column
 	private Integer teamId;
-	
 
 }
