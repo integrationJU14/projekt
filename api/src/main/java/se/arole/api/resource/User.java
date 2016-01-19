@@ -1,10 +1,13 @@
 package se.arole.api.resource;
 
+import java.util.List;
+
 public class User {
 	
 	long userId; 
 	boolean isActive;
 	String userName, firstName, lastName;
+	List<WorkItem> assignedWorkItems;
 	
 	public User(long userId, boolean isActive, String userName, String firstName, String lastName){
 		this.userId = userId;
@@ -12,8 +15,6 @@ public class User {
 		this.userName = userName;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		
-		
 		
 	}
 
