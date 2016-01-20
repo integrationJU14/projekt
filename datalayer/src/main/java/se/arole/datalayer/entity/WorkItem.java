@@ -19,8 +19,8 @@ public class WorkItem implements Serializable{
 	Integer itemId;
 	String description;
 	String status;
-	@ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_user_id")
+	@ManyToOne
+    @JoinColumn(name = "userID")
 	User solver;
 	public WorkItem() {
 		
