@@ -21,6 +21,11 @@ public class User {
 	private boolean isActive;
 	
 	
+	
+	public User() {
+		
+	}
+
 	public User(String name, Integer userId, boolean isActive) {
 		super();
 		this.name = name;
