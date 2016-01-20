@@ -15,7 +15,7 @@ public class UserAdapter {
 	}
 
 	public static User fromUserDb(se.arole.datalayer.entity.User userDb) {
-		Long id = userDb.getId();
+		Integer id = userDb.getUserId();
 		String userName = userDb.getName();
 
 		return new User(id, true, userName, "", "");

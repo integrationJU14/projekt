@@ -1,4 +1,4 @@
-package se.arole.datalayer.services;
+package se.arole.datalayer.service;
 
 import java.util.List;
 
@@ -16,6 +16,5 @@ public interface WorkItemService {
 	List<WorkItem> workItemsByTeam(Team team);
 	List<WorkItem> workItembyUser(User user);
 	WorkItem descriptionWorkItem (String description);
-	//
 
 }

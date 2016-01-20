@@ -28,8 +28,8 @@ public class User {
 		this.isActive = isActive;
 	}
 	
-	public Long getId() {
-		return id;
+	public Integer getUserId() {
+		return userId;
 	}
 	
 	public String getName() {
