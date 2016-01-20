@@ -16,7 +16,7 @@ public final class UserController {
 	}
 
 	public Collection<User> getAll() {
-		return Collections.EMPTY_LIST;
+		return Collections.emptyList();
 	}
 
 	public User create(User user) {
@@ -24,6 +24,13 @@ public final class UserController {
 		se.arole.datalayer.entity.User createdUser = userService.createUser(userDb);
 
 		return UserAdapter.fromUserDb(createdUser);
+	}
+
+	public User update(Integer id, User user) {
+		se.arole.datalayer.entity.User userDb = UserAdapter.toUserDb(user);
+		se.arole.datalayer.entity.User updatedUser = userService.updateUser(userDb, id);
+
+		return UserAdapter.fromUserDb(updatedUser);
 	}
 
 	public User getUser(Integer id) {
@@ -34,7 +41,7 @@ public final class UserController {
 
 	public User getUser(String userName) {
 		se.arole.datalayer.entity.User userByUsername = userService.getUserByUsername(userName);
-		
+
 		return UserAdapter.fromUserDb(userByUsername);
 	}
 }

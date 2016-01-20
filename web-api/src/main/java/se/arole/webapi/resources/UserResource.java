@@ -1,12 +1,13 @@
 package se.arole.webapi.resources;
 
 import java.net.URI;
-import java.util.Collection;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
@@ -35,6 +36,16 @@ public final class UserResource {
 		return Response.created(location).build();
 	}
 
+	@PUT
+	@Path("/{id}")
+	public Response updateUser(@PathParam("id") Integer id, User user) {
+
+		userController.getUser(id);
+		User updatedUser = userController.update(id, user);
+
+		return Response.ok(updatedUser).build();
+	}
+
 	@GET
 	@Path("/{id}")
 	public Response getUser(@PathParam("id") Integer id) {
@@ -44,10 +55,11 @@ public final class UserResource {
 	}
 
 	@GET
-	@Path("/{username}")
-	public Response getUser(@PathParam("username") String userName) {
+	@QueryParam("{userName}")
+	public Response getUser(@QueryParam("userName") String userName) {
 		User user = userController.getUser(userName);
-
+		// TODO: POssibility to add a mapper for an exception if no customer is
+		// found
 		return Response.ok(user).build();
 	}
 
