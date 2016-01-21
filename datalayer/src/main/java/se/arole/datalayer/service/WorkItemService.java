@@ -8,13 +8,19 @@ import se.arole.datalayer.entity.User;
 import se.arole.datalayer.entity.WorkItem;
 
 public interface WorkItemService {
-	
+
 	WorkItem createWorkItem(WorkItem workItem);
-	void changeStatusWorkItem(Status status, long workItemId);
+
+	void changeStatusWorkItem(Status status, Integer workItemId);
+
 	void addWorkItemToUser(WorkItem workItem, User user);
+
 	List<WorkItem> workItemByStatus(Status status);
-	List<WorkItem> workItemsByTeam(Team team);
+
 	List<WorkItem> workItembyUser(User user);
-	WorkItem descriptionWorkItem (String description);
+
+	List<WorkItem> workItemsByTeam(Team team);
+
+	List<WorkItem> descriptionWorkItem(String description);
 
 }

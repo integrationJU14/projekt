@@ -3,6 +3,7 @@ package se.arole.datalayer.entity;
 import java.io.Serializable;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +17,7 @@ public class WorkItem implements Serializable{
 	@Id
 	@GeneratedValue
 	private Long id;
+	@Column(unique=true)
 	Integer itemId;
 	String description;
 	String status;

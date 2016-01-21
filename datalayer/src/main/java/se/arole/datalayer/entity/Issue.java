@@ -2,6 +2,7 @@ package se.arole.datalayer.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -11,6 +12,7 @@ public class Issue implements Serializable {
 	@Id
 	@GeneratedValue
 	private Long id;
+	@Column(unique=true)
 	Integer issueId;
 	boolean isSolved;
 
