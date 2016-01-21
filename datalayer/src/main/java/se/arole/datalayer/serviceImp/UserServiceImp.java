@@ -2,13 +2,22 @@ package se.arole.datalayer.serviceImp;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import se.arole.datalayer.entity.User;
 import se.arole.datalayer.repository.UserRepository;
 import se.arole.datalayer.service.UserService;
 
+@Service
 public class UserServiceImp implements UserService {
-
-	UserRepository userRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public UserServiceImp(UserRepository userRepository){
+		this.userRepository = userRepository;
+	}
 	
 	@Override
 	public User createUser(User user) {
