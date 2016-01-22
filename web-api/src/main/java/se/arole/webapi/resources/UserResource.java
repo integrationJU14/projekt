@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 import se.arole.api.controller.UserController;
-import se.arole.api.resource.User;
+import se.arole.api.resource.UserVO;
 
 @Path("user")
 public final class UserResource {
@@ -29,8 +29,8 @@ public final class UserResource {
 	}
 
 	@POST
-	public Response createUser(User user) {
-		User createdUser = userController.create(user);
+	public Response createUser(UserVO user) {
+		UserVO createdUser = userController.create(user);
 		URI location = uriInfo.getAbsolutePathBuilder().path("" + createdUser.getUserId()).build();
 
 		return Response.created(location).build();
@@ -38,10 +38,10 @@ public final class UserResource {
 
 	@PUT
 	@Path("/{id}")
-	public Response updateUser(@PathParam("id") Integer id, User user) {
+	public Response updateUser(@PathParam("id") Integer id, UserVO user) {
 
 		userController.getUser(id);
-		User updatedUser = userController.update(id, user);
+		UserVO updatedUser = userController.update(id, user);
 
 		return Response.ok(updatedUser).build();
 	}
@@ -49,7 +49,7 @@ public final class UserResource {
 	@GET
 	@Path("/{id}")
 	public Response getUser(@PathParam("id") Integer id) {
-		User user = userController.getUser(id);
+		UserVO user = userController.getUser(id);
 
 		return Response.ok(user).build();
 	}
@@ -57,7 +57,7 @@ public final class UserResource {
 	@GET
 	@QueryParam("{userName}")
 	public Response getUser(@QueryParam("userName") String userName) {
-		User user = userController.getUser(userName);
+		UserVO user = userController.getUser(userName);
 		// TODO: POssibility to add a mapper for an exception if no customer is
 		// found
 		return Response.ok(user).build();
