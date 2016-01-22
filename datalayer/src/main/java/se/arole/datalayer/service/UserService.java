@@ -10,5 +10,4 @@ public interface UserService {
 	User getUser (Integer userId);
 	User getUserByUsername (String userName);
 	
-
 }
