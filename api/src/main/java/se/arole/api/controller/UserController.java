@@ -4,7 +4,8 @@ import java.util.Collection;
 import java.util.Collections;
 
 import se.arole.api.adapter.UserAdapter;
-import se.arole.api.resource.User;
+import se.arole.api.resource.UserVO;
+import se.arole.datalayer.entity.User;
 import se.arole.datalayer.service.UserService;
 
 public final class UserController {
@@ -15,32 +16,32 @@ public final class UserController {
 		this.userService = userService;
 	}
 
-	public Collection<User> getAll() {
+	public Collection<UserVO> getAll() {
 		return Collections.emptyList();
 	}
 
-	public User create(User user) {
-		se.arole.datalayer.entity.User userDb = UserAdapter.toUserDb(user);
-		se.arole.datalayer.entity.User createdUser = userService.createUser(userDb);
-		
+	public UserVO create(UserVO user) {
+		User userDb = UserAdapter.toUserDb(user);
+		User createdUser = userService.createUser(userDb);
+
 		return UserAdapter.fromUserDb(createdUser);
 	}
 
-	public User update(Integer id, User user) {
-		se.arole.datalayer.entity.User userDb = UserAdapter.toUserDb(user);
-		se.arole.datalayer.entity.User updatedUser = userService.updateUser(userDb, id);
+	public UserVO update(Integer id, UserVO user) {
+		User userDb = UserAdapter.toUserDb(user);
+		User updatedUser = userService.updateUser(userDb, id);
 
 		return UserAdapter.fromUserDb(updatedUser);
 	}
 
-	public User getUser(Integer id) {
-		se.arole.datalayer.entity.User user = userService.getUser(id);
+	public UserVO getUser(Integer id) {
+		User user = userService.getUser(id);
 
 		return UserAdapter.fromUserDb(user);
 	}
 
-	public User getUser(String userName) {
-		se.arole.datalayer.entity.User userByUsername = userService.getUserByUsername(userName);
+	public UserVO getUser(String userName) {
+		User userByUsername = userService.getUserByUsername(userName);
 
 		return UserAdapter.fromUserDb(userByUsername);
 	}
