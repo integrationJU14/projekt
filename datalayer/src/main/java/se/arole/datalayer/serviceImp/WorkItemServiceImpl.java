@@ -54,7 +54,7 @@ public class WorkItemServiceImpl implements WorkItemService {
 		return workItems;
 	}
 
-	public List<WorkItem> descriptionWorkItem(String description) {
+	public List<WorkItem> workItemByDescription(String description) {
 		List<WorkItem> workItems = new ArrayList<>();
 		for (WorkItem workItem : repository.findAll()) {
 			if (workItem.getDescription().contains(description))

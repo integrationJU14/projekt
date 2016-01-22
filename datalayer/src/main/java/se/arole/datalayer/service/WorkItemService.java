@@ -21,6 +21,6 @@ public interface WorkItemService {
 
 	List<WorkItem> workItemsByTeam(Team team);
 
-	List<WorkItem> descriptionWorkItem(String description);
+	List<WorkItem> workItemByDescription(String description);
 
 }

@@ -7,12 +7,12 @@ import se.arole.datalayer.entity.User;
 
 public interface TeamService {
 
-	Team saveTeam(Team team);
+	Team createTeam(Team team);
 
 	Team updateTeam(Team team, int teamId);
 
 	List<Team> getAllTeams();
 
-	void addUser(User user, int teamId);
+	void addUserToTeam(User user, int teamId);
 
 }

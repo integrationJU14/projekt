@@ -1,14 +1,15 @@
 package se.arole.datalayer.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class WorkItem implements Serializable{
@@ -22,8 +23,11 @@ public class WorkItem implements Serializable{
 	String description;
 	String status;
 	@ManyToOne
-    @JoinColumn(name = "userID")
+    @JoinColumn(name = "fk_user_id")
 	User solver;
+	@OneToMany
+    @JoinColumn(name = "fk_workItem_id")
+	List<Issue> issue;
 	public WorkItem() {
 		
 	}
@@ -57,6 +61,7 @@ public class WorkItem implements Serializable{
 	public void setSolver(User solver) {
 		this.solver = solver;
 	}
+	
 	
 	
 	
