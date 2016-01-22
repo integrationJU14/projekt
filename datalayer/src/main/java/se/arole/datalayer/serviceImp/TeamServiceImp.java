@@ -14,7 +14,7 @@ import se.arole.datalayer.repository.WorkItemRepository;
 import se.arole.datalayer.service.TeamService;
 
 @Service
-public class TeamServiceImpl implements TeamService {
+public class TeamServiceImp implements TeamService {
 
 	
 	@Autowired

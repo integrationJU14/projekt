@@ -12,7 +12,7 @@ import se.arole.datalayer.repository.IssueRepository;
 import se.arole.datalayer.service.IssueService;
 
 @Service
-public class IssueServiceImpl implements IssueService {
+public class IssueServiceImp implements IssueService {
 
 	@Autowired
 	private IssueRepository issueRepository;

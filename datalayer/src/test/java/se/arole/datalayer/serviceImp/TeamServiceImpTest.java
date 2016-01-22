@@ -26,7 +26,7 @@ public class TeamServiceImpTest {
 
 	private Team team;
 	@Autowired
-	private TeamServiceImpl teamServiceImp;
+	private TeamServiceImp teamServiceImp;
 
 	@Before
 	public void initTeam() {
