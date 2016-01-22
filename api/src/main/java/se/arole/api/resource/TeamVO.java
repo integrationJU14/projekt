@@ -2,13 +2,13 @@ package se.arole.api.resource;
 
 import java.util.List;
 
-public class Team {
+public class TeamVO {
 	
 	long teamId;
 	String teamName;
-	List<User> teamUsers;
+	List<UserVO> teamUsers;
 	
-	public Team(long teamId, String teamName) {
+	public TeamVO(long teamId, String teamName) {
 		this.teamId = teamId;
 		this.teamName = teamName;
 	}

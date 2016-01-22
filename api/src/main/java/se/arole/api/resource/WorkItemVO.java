@@ -4,15 +4,15 @@ import java.util.List;
 
 import se.arole.datalayer.entity.Issue;
 
-public class WorkItem {
+public class WorkItemVO {
 	
 	int workItemId;
 	String description, header;
-	List<User> users;
+	List<UserVO> users;
 	List<Issue> assignedIssues;
-	User assignedUser;
+	UserVO assignedUser;
 	
-	public WorkItem(Integer workItemId, String decsription, String header, User assignedUser, List<User> users, List<Issue> issues){
+	public WorkItemVO(Integer workItemId, String decsription, String header, UserVO assignedUser, List<UserVO> users, List<Issue> issues){
 		this.workItemId = workItemId;
 		this.description = decsription;
 		this.header = header;
@@ -46,11 +46,11 @@ public class WorkItem {
 		this.header = header;
 	}
 
-	public List<User> getUsers() {
+	public List<UserVO> getUsers() {
 		return users;
 	}
 
-	public void setUsers(List<User> users) {
+	public void setUsers(List<UserVO> users) {
 		this.users = users;
 	}
 
@@ -62,11 +62,11 @@ public class WorkItem {
 		this.assignedIssues = assignedIssues;
 	}
 
-	public User getAssignedUser() {
+	public UserVO getAssignedUser() {
 		return assignedUser;
 	}
 
-	public void setAssignedUser(User assignedUser) {
+	public void setAssignedUser(UserVO assignedUser) {
 		this.assignedUser = assignedUser;
 	}
 	
