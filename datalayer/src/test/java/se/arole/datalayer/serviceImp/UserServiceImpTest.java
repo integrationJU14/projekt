@@ -1,7 +1,5 @@
 package se.arole.datalayer.serviceImp;
-import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
 import se.arole.datalayer.config.Config;
-import se.arole.datalayer.config.Services;
 import se.arole.datalayer.entity.User;
 
 /**
@@ -19,7 +16,7 @@ import se.arole.datalayer.entity.User;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { Config.class, Services.class })
+@ContextConfiguration(classes = { Config.class})
 @TestExecutionListeners(DependencyInjectionTestExecutionListener.class)
 public class UserServiceImpTest {
 
@@ -51,7 +48,7 @@ public class UserServiceImpTest {
 	@Test
 	public void getUserById(){
 		userServiceImp.createUser(new User("getMe", 746357, true));
-		User userTemp = userServiceImp.getUser(746357);
+		User userTemp = userServiceImp.getByUserId(746357);
 		System.out.println(userTemp.toString());
 	
 	}

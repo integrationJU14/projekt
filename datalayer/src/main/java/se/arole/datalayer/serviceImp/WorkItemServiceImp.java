@@ -14,7 +14,7 @@ import se.arole.datalayer.repository.WorkItemRepository;
 import se.arole.datalayer.service.WorkItemService;
 
 @Service
-public class WorkItemServiceImpl implements WorkItemService {
+public class WorkItemServiceImp implements WorkItemService {
 	@Autowired
 	private WorkItemRepository repository;
 

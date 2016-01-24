@@ -49,6 +49,10 @@ public class User {
 		return id;
 	}
 
+	public boolean isActive() {
+		return isActive;
+	}
+
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", userId=" + userId + ", isActive=" + isActive + "]";

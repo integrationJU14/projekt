@@ -8,7 +8,7 @@ import se.arole.datalayer.entity.User;
  * @author Holstad
  *
  */
-@Repository
+
 public interface UserRepository extends CrudRepository <User, Long> {
 	User findByUserId(Integer userId);
 }

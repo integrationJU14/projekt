@@ -18,6 +18,15 @@ public class IssueServiceImp implements IssueService {
 	private IssueRepository issueRepository;
 	
 
+	public IssueServiceImp(IssueRepository issueRepository) {
+		
+		this.issueRepository = issueRepository;
+	}
+
+	public IssueServiceImp() {
+		
+	}
+
 	@Override
 	public Issue createIssue(Issue issue) {
 

@@ -3,8 +3,8 @@ package se.arole.datalayer.serviceImp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
 import se.arole.datalayer.entity.User;
@@ -15,18 +15,14 @@ import se.arole.datalayer.service.UserService;
  * @author Holstad
  *
  */
+@Configuration
+@ComponentScan("se.arole.datalayer.repository") 
 @Service
 public class UserServiceImp implements UserService {
 	
 	@Autowired
 	private UserRepository userRepository;
-	
-	public UserServiceImp(UserRepository userRepository){
-		this.userRepository = userRepository;
-	}
-	
-	public UserServiceImp() {}
-	
+		
 	@Override
 	public User createUser(User user) {
 		return userRepository.save(user);
@@ -49,7 +45,7 @@ public class UserServiceImp implements UserService {
 	}
 
 	@Override
-	public User getUser(Integer userId) {
+	public User getByUserId(Integer userId) {
 		return userRepository.findByUserId(userId);
 	}
 
